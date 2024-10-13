@@ -9,9 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.homeactivity.R
-import com.example.homeactivity.data.response.ListEventsItemActive
+import com.example.homeactivity.data.response.ListEventsItem
 
-class EventAdapterActive(private var eventList: List<ListEventsItemActive?>) :
+class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
     RecyclerView.Adapter<EventAdapterActive.EventViewHolder>() {
 
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -50,7 +50,7 @@ class EventAdapterActive(private var eventList: List<ListEventsItemActive?>) :
     }
 
     // Update data method for updating list
-    fun updateData(newEventList: List<ListEventsItemActive?>) {
+    fun updateData(newEventList: List<ListEventsItem?>) {
         eventList = newEventList
         notifyDataSetChanged() // Notify the adapter to update UI
     }

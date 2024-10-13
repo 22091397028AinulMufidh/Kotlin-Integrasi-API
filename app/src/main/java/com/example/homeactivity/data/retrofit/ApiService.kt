@@ -9,4 +9,11 @@ interface ApiService {
     @GET("events")
     fun getEvents(@Query("active") active: Int): Call<EventResponse>
 
+    @GET("events")
+    fun getEventsActive(@Query("active") active: Int): Call<EventResponse>
+
+//    @GET("events")
+//    fun getEventsActive(@Query("finished") active: Int): Call<EventActiveResponse>
+
+
 }

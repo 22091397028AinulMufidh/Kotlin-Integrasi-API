@@ -1,20 +1,18 @@
 package com.example.homeactivity
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.homeactivity.databinding.ActivityMainBinding
 import com.example.homeactivity.ui.upcoming.EventAdapterActive
-import com.example.homeactivity.ui.upcoming.MainViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val mainViewModel: MainViewModel by viewModels()
+//    private val mainViewModel: MainViewModel by viewModels()
     private lateinit var eventAdapter: EventAdapterActive
 
     override fun onCreate(savedInstanceState: Bundle?) {
