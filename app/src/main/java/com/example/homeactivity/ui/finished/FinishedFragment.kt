@@ -38,6 +38,9 @@ class FinishedFragment : Fragment() {
         binding.recyclerViewFinished.adapter = adapter
         binding.recyclerViewFinished.layoutManager = LinearLayoutManager(requireContext())
 
+        // Tampilkan ProgressBar sebelum data dimuat
+        binding.progressBar.visibility = View.VISIBLE
+
         // Observe LiveData from ViewModel for events
         finishedViewModel.eventData.observe(viewLifecycleOwner) { eventResponse ->
             eventResponse?.let {
@@ -49,12 +52,15 @@ class FinishedFragment : Fragment() {
                     Toast.makeText(requireContext(), "No events found", Toast.LENGTH_SHORT).show()
                 }
             }
+            // Sembunyikan ProgressBar setelah data selesai dimuat
+            binding.progressBar.visibility = View.GONE
         }
 
         // Fetch events when the fragment is created
         finishedViewModel.getEvents()
     }
 }
+
 
 
 
