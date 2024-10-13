@@ -1,0 +1,3 @@
+SUBMISSION 1 DICODING FUNDAMENTAL ANDROID
+
+- Menampilkan data API event Dicoding 
