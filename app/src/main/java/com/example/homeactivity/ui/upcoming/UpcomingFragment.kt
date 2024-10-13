@@ -14,7 +14,7 @@ class UpcomingFragment : Fragment() {
 
     private lateinit var upcomingViewModel: UpcomingViewModel
     private lateinit var adapter: EventAdapterActive
-    private lateinit var binding: FragmentUpcomingBinding // Sesuaikan dengan ViewBinding kamu
+    private lateinit var binding: FragmentUpcomingBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

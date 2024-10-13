@@ -25,7 +25,6 @@ class UpcomingViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<EventResponse>, t: Throwable) {
-                // Tangani kegagalan jika perlu
             }
         })
     }

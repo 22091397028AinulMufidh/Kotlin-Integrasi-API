@@ -19,6 +19,7 @@ class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
         val itemName: TextView = itemView.findViewById(R.id.item_name)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val endedTime: TextView = itemView.findViewById(R.id.end_time)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
