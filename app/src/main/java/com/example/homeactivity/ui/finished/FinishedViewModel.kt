@@ -18,13 +18,10 @@ class FinishedViewModel : ViewModel() {
             override fun onResponse(call: Call<EventResponse>, response: Response<EventResponse>) {
                 if (response.isSuccessful) {
                     _eventData.value = response.body()
-                } else {
-                    // Tangani error jika perlu
                 }
             }
 
             override fun onFailure(call: Call<EventResponse>, t: Throwable) {
-                // Tangani kegagalan jika perlu
             }
         })
     }

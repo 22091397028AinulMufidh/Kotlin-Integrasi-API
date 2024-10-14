@@ -36,7 +36,7 @@ class UpcomingFragment : Fragment() {
         binding.recyclerViewUpcoming.adapter = adapter
         binding.recyclerViewUpcoming.layoutManager = LinearLayoutManager(requireContext())
 
-        // Tampilkan ProgressBar sebelum data dimuat
+        // Tampilkan ProgressBar
         binding.progressBar.visibility = View.VISIBLE
 
         // Observe LiveData from ViewModel for events

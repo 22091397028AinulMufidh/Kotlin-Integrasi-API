@@ -53,6 +53,6 @@ class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
     // Update data method for updating list
     fun updateData(newEventList: List<ListEventsItem?>) {
         eventList = newEventList
-        notifyDataSetChanged() // Notify the adapter to update UI
+        notifyDataSetChanged()
     }
 }

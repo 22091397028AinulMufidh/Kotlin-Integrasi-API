@@ -32,21 +32,6 @@ class MainActivity : AppCompatActivity() {
         )
         navView.setupWithNavController(navController)
 
-//        // Initialize RecyclerView and Adapter
-//        eventAdapter = EventAdapter(listOf())
-//        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-//        binding.recyclerView.adapter = eventAdapter
-//
-//        // Observe LiveData from ViewModel
-//        mainViewModel.eventData.observe(this) { eventResponse ->
-//            eventResponse?.listEvents?.let { events ->
-//                // Update adapter with new events
-//                eventAdapter.updateEvents(events.filterNotNull())
-//            }
-//        }
-//
-//        // Call function to fetch events from API
-//        mainViewModel.getEvents()
     }
 }
 
