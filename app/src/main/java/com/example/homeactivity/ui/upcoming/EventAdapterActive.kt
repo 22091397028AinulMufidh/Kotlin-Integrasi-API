@@ -11,8 +11,10 @@ import com.bumptech.glide.Glide
 import com.example.homeactivity.R
 import com.example.homeactivity.data.response.ListEventsItem
 
-class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
-    RecyclerView.Adapter<EventAdapterActive.EventViewHolder>() {
+class EventAdapterActive(
+    private var eventList: List<ListEventsItem?>,
+    private val onItemClick: (ListEventsItem?) -> Unit // Lambda callback for item click
+) : RecyclerView.Adapter<EventAdapterActive.EventViewHolder>() {
 
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.img_item_photo)
@@ -20,6 +22,13 @@ class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val endedTime: TextView = itemView.findViewById(R.id.end_time)
 
+        init {
+            // Set the click listener for the itemView
+            itemView.setOnClickListener {
+                val eventItem = eventList[adapterPosition]
+                onItemClick(eventItem) // Trigger the lambda with the clicked event
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
@@ -34,7 +43,7 @@ class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
         // Set event name
         holder.itemName.text = eventItem?.name ?: "No Name Available"
 
-        holder.endedTime.text =eventItem?.endTime ?: "No Time Available"
+        holder.endedTime.text = eventItem?.endTime ?: "No Time Available"
 
         // Load image using Glide or other image loading libraries
         if (eventItem?.imageLogo != null) {
@@ -56,3 +65,4 @@ class EventAdapterActive(private var eventList: List<ListEventsItem?>) :
         notifyDataSetChanged()
     }
 }
+

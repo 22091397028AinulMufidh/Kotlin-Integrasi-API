@@ -1,5 +1,6 @@
 package com.example.homeactivity.ui.upcoming
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,7 +33,12 @@ class UpcomingFragment : Fragment() {
         upcomingViewModel = ViewModelProvider(this).get(UpcomingViewModel::class.java)
 
         // Setup RecyclerView
-        adapter = EventAdapterActive(emptyList())
+        adapter = EventAdapterActive(emptyList()) { selectedEvent ->
+            // Handle item click and navigate to UpcomingDetailActivity
+            val intent = Intent(requireActivity(), UpcomingDetailActivity::class.java)
+            intent.putExtra("EVENT_DATA", selectedEvent)
+            startActivity(intent)
+        }
         binding.recyclerViewUpcoming.adapter = adapter
         binding.recyclerViewUpcoming.layoutManager = LinearLayoutManager(requireContext())
 
@@ -44,7 +50,7 @@ class UpcomingFragment : Fragment() {
             eventResponse?.let {
                 val events = it.listEvents ?: emptyList() // Assumes listEvents is a property of EventResponse
                 if (events.isNotEmpty()) {
-                    adapter.updateData(events)
+                    adapter.updateData(events) // Update RecyclerView data
                 } else {
                     // Handle case when events list is empty
                     Toast.makeText(requireContext(), "No events found", Toast.LENGTH_SHORT).show()
@@ -58,5 +64,6 @@ class UpcomingFragment : Fragment() {
         upcomingViewModel.getEventsActive()
     }
 }
+
 
 
