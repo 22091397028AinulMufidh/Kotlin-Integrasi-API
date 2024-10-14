@@ -73,6 +73,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/register"
+            app:backgroundTint="@color/purple_500"
             android:textAllCaps="false"
             app:cornerRadius="40dp"
             android:textSize="14sp"/>
