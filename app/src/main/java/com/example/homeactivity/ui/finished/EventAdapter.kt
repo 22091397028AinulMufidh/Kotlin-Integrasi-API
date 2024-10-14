@@ -20,7 +20,7 @@ class EventAdapter(
         val imageView: ImageView = itemView.findViewById(R.id.img_item_photo)
         val itemName: TextView = itemView.findViewById(R.id.item_name)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
-        val endedTime: TextView = itemView.findViewById(R.id.end_time)
+        val ownerName: TextView = itemView.findViewById(R.id.item_description)
 
         init {
             // Set the click listener for the itemView
@@ -41,10 +41,8 @@ class EventAdapter(
         val eventItem = eventList[position]
 
         // Set event name
-        holder.itemName.text = eventItem?.name ?: "No Name Available"
-
-        // Set event end time
-        holder.endedTime.text = eventItem?.endTime ?: "No Time Available"
+        holder.itemName.text = eventItem?.name
+        holder.ownerName.text = eventItem?.ownerName
 
         // Load image using Glide or other image loading libraries
         if (eventItem?.imageLogo != null) {
@@ -55,7 +53,6 @@ class EventAdapter(
             holder.progressBar.visibility = View.GONE
         }
     }
-
 
     override fun getItemCount(): Int {
         return eventList.size

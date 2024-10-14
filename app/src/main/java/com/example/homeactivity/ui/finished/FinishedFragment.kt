@@ -17,7 +17,7 @@ class FinishedFragment : Fragment() {
 
     private lateinit var finishedViewModel: FinishedViewModel
     private lateinit var adapter: EventAdapter
-    private lateinit var binding: FragmentFinishedBinding // Sesuaikan dengan ViewBinding kamu
+    private lateinit var binding: FragmentFinishedBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,7 +54,6 @@ class FinishedFragment : Fragment() {
                 if (events.isNotEmpty()) {
                     adapter.updateData(events)
                 } else {
-                    // Handle case when events list is empty
                     Toast.makeText(requireContext(), "No events found", Toast.LENGTH_SHORT).show()
                 }
             }
