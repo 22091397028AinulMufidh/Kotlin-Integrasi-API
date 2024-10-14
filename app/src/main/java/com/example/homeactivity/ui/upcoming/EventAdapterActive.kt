@@ -20,13 +20,13 @@ class EventAdapterActive(
         val imageView: ImageView = itemView.findViewById(R.id.img_item_photo)
         val itemName: TextView = itemView.findViewById(R.id.item_name)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
-        val endedTime: TextView = itemView.findViewById(R.id.end_time)
+        val ownerName: TextView = itemView.findViewById(R.id.item_description)
 
         init {
             // Set the click listener for the itemView
             itemView.setOnClickListener {
                 val eventItem = eventList[adapterPosition]
-                onItemClick(eventItem) // Trigger the lambda with the clicked event
+                onItemClick(eventItem)
             }
         }
     }
@@ -41,9 +41,9 @@ class EventAdapterActive(
         val eventItem = eventList[position]
 
         // Set event name
-        holder.itemName.text = eventItem?.name ?: "No Name Available"
+        holder.itemName.text = eventItem?.name
 
-        holder.endedTime.text = eventItem?.endTime ?: "No Time Available"
+        holder.ownerName.text = eventItem?.ownerName
 
         // Load image using Glide or other image loading libraries
         if (eventItem?.imageLogo != null) {
