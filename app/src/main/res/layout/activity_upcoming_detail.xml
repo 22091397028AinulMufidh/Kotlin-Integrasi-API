@@ -19,15 +19,13 @@
             android:id="@+id/img_event_logo"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="Event Image" />
+            android:scaleType="centerCrop" />
 
         <!-- Nama Acara (name) -->
         <TextView
             android:id="@+id/tv_event_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Acara"
             android:textSize="24sp"
             android:textStyle="bold"
             android:paddingTop="16dp"
@@ -38,7 +36,6 @@
             android:id="@+id/tv_owner_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Penyelenggara Acara"
             android:textSize="16sp"
             android:paddingTop="8dp"
             android:textColor="@android:color/darker_gray" />
@@ -48,7 +45,6 @@
             android:id="@+id/tv_event_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Waktu Acara"
             android:textSize="16sp"
             android:paddingTop="8dp"
             android:textColor="@android:color/black" />
@@ -58,7 +54,6 @@
             android:id="@+id/tv_event_quota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sisa Kuota"
             android:textSize="16sp"
             android:paddingTop="8dp"
             android:textColor="@android:color/black" />
@@ -68,7 +63,6 @@
             android:id="@+id/tv_event_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deskripsi Acara"
             android:textSize="14sp"
             android:paddingTop="16dp"
             android:textColor="@android:color/black" />
