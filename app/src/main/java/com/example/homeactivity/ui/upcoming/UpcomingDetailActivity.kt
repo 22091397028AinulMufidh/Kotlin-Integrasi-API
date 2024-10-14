@@ -44,13 +44,13 @@ class UpcomingDetailActivity : AppCompatActivity() {
                 HtmlCompat.FROM_HTML_MODE_LEGACY
             )
 
-            // Tampilkan gambar menggunakan Glide atau library gambar lainnya
+            // Tampilkan gambar menggunakan Glide
             Glide.with(this)
-                .load(it.imageLogo ?: it.mediaCover) // Coba gunakan mediaCover jika imageLogo tidak ada
-                .placeholder(R.drawable.ic_launcher_background) // Placeholder jika gambar tidak ada
+                .load(it.mediaCover)
+                .placeholder(R.drawable.ic_launcher_background)
                 .into(eventImage)
         } ?: run {
-            // Jika eventItem null, tampilkan pesan default atau handling error
+            // Jika eventItem null, tampilkan handling error
             eventName.text = "Event Not Found"
         }
     }
