@@ -13,7 +13,7 @@ import com.example.homeactivity.data.response.ListEventsItem
 
 class EventAdapterActive(
     private var eventList: List<ListEventsItem?>,
-    private val onItemClick: (ListEventsItem?) -> Unit // Lambda callback for item click
+    private val onItemClick: (ListEventsItem?) -> Unit
 ) : RecyclerView.Adapter<EventAdapterActive.EventViewHolder>() {
 
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

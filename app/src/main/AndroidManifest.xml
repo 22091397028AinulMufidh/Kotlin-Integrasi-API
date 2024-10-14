@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HomeActivity"
         tools:targetApi="31">
         <activity
+            android:name=".ui.finished.FinishedDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.upcoming.UpcomingDetailActivity"
             android:exported="false" />
         <activity

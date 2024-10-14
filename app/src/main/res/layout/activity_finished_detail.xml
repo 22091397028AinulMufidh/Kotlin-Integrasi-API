@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:background="@android:color/white"
-    tools:context=".ui.upcoming.UpcomingDetailActivity">
+    tools:context=".ui.finished.FinishedDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,14 +68,5 @@
             android:paddingTop="16dp"
             android:textColor="@android:color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_regist"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            app:backgroundTint="@color/purple_500"
-            android:textAllCaps="false"
-            app:cornerRadius="40dp"
-            android:textSize="14sp"/>
     </LinearLayout>
 </ScrollView>

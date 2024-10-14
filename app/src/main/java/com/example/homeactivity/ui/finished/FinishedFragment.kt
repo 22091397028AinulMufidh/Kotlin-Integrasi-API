@@ -1,6 +1,7 @@
 package com.example.homeactivity.ui.finished
 
 import FinishedViewModel
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +35,12 @@ class FinishedFragment : Fragment() {
         finishedViewModel = ViewModelProvider(this).get(FinishedViewModel::class.java)
 
         // Setup RecyclerView
-        adapter = EventAdapter(emptyList())
+        adapter = EventAdapter(emptyList()) { selectedEvent ->
+            // Handle item click and navigate to UpcomingDetailActivity
+            val intent = Intent(requireActivity(), FinishedDetailActivity::class.java)
+            intent.putExtra("EVENT_DATA", selectedEvent)
+            startActivity(intent)
+        }
         binding.recyclerViewFinished.adapter = adapter
         binding.recyclerViewFinished.layoutManager = LinearLayoutManager(requireContext())
 

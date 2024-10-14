@@ -11,14 +11,24 @@ import com.bumptech.glide.Glide
 import com.example.homeactivity.R
 import com.example.homeactivity.data.response.ListEventsItem
 
-class EventAdapter(private var eventList: List<ListEventsItem?>) :
-    RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+class EventAdapter(
+    private var eventList: List<ListEventsItem?>,
+    private val onItemClick: (ListEventsItem?) -> Unit
+) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.img_item_photo)
         val itemName: TextView = itemView.findViewById(R.id.item_name)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val endedTime: TextView = itemView.findViewById(R.id.end_time)
+
+        init {
+            // Set the click listener for the itemView
+            itemView.setOnClickListener {
+                val eventItem = eventList[adapterPosition]
+                onItemClick(eventItem)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
