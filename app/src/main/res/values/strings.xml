@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="upcoming">Upcoming</string>
     <string name="finished">Finished</string>
+    <string name="register">Register</string>
     <string name="title_upcoming">Dicoding Event</string>
     <string name="description_upcoming">Recommendation for you</string>
     <string name="content_upcoming">Fragment Upcoming</string>
