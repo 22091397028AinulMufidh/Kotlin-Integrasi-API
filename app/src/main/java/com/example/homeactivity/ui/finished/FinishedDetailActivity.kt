@@ -1,7 +1,10 @@
 package com.example.homeactivity.ui.finished
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +33,15 @@ class FinishedDetailActivity : AppCompatActivity() {
         val eventTime = findViewById<TextView>(R.id.tv_event_time)
         val eventQuota = findViewById<TextView>(R.id.tv_event_quota)
         val eventDescription = findViewById<TextView>(R.id.tv_event_description)
+        val btnRegist = findViewById<Button>(R.id.btn_regist)
+
+        // Button Register
+        btnRegist.setOnClickListener {
+            val url = "https://www.dicoding.com/events/"
+
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
 
         // Jika eventItem tidak null, tampilkan datanya
         eventItem?.let {
@@ -42,7 +54,6 @@ class FinishedDetailActivity : AppCompatActivity() {
                 it.description ?: "No Description Available",
                 HtmlCompat.FROM_HTML_MODE_LEGACY
             )
-
 
             // Tampilkan gambar menggunakan Glide
             Glide.with(this)

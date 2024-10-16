@@ -76,5 +76,15 @@
             android:paddingTop="16dp"
             android:textColor="@android:color/black" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_regist"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            app:backgroundTint="@color/purple_500"
+            android:textAllCaps="false"
+            app:cornerRadius="40dp"
+            android:textSize="14sp"/>
+
     </LinearLayout>
 </ScrollView>
