@@ -22,8 +22,8 @@ class UpcomingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment using ViewBinding
-        binding = FragmentUpcomingBinding.inflate(inflater, container, false)
-        return binding.root
+        binding = FragmentUpcomingBinding.inflate(inflater, container, false) // Initialize binding
+        return binding.root  // Return the root view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,10 +39,11 @@ class UpcomingFragment : Fragment() {
             intent.putExtra("EVENT_DATA", selectedEvent)
             startActivity(intent)
         }
+
         binding.recyclerViewUpcoming.adapter = adapter
         binding.recyclerViewUpcoming.layoutManager = LinearLayoutManager(requireContext())
 
-        // Tampilkan ProgressBar
+        // Show ProgressBar while loading data
         binding.progressBar.visibility = View.VISIBLE
 
         // Observe LiveData from ViewModel for events
@@ -56,7 +57,7 @@ class UpcomingFragment : Fragment() {
                     Toast.makeText(requireContext(), "No events found", Toast.LENGTH_SHORT).show()
                 }
             }
-            // Sembunyikan ProgressBar setelah data selesai dimuat
+            // Hide ProgressBar after data is loaded
             binding.progressBar.visibility = View.GONE
         }
 
