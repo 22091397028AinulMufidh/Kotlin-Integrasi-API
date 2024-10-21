@@ -16,4 +16,9 @@
         android:icon="@drawable/finished"
         android:title="@string/finished" />
 
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/favorite"
+        android:title="@string/favorite" />
+
 </menu>

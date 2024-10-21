@@ -22,4 +22,10 @@
         android:name="com.example.homeactivity.ui.finished.FinishedFragment"
         android:label="@string/finished"
         tools:layout="@layout/fragment_finished" />
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.homeactivity.ui.favorite.FavoriteFragment"
+        android:label="@string/finished"
+        tools:layout="@layout/fragment_favorite" />
 </navigation>
