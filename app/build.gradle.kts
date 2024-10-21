@@ -66,4 +66,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.material.v190)
     implementation(libs.retrofit2.retrofit)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v261)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.kotlinx.coroutines.core.v152)
+    implementation(libs.kotlinx.coroutines.android)
 }

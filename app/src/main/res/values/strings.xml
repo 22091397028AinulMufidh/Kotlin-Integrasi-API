@@ -5,6 +5,9 @@
     <string name="finished">Finished</string>
     <string name="favorite">Favorite</string>
     <string name="setting">Setting</string>
+    <string name="title_dark_mode">Dark Mode</string>
+    <string name="dark_mode"></string>
+    <string name="subtitle_dark_mode">Enable dark mode</string>
     <string name="register">Register</string>
     <string name="title_upcoming">Dicoding Event</string>
     <string name="description_upcoming">Recommendation for you</string>
