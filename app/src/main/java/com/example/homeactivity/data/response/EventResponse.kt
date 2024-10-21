@@ -9,9 +9,6 @@ data class EventResponse(
 	@field:SerializedName("listEvents")
 	val listEvents: List<ListEventsItem?>? = null,
 
-	@field:SerializedName("error")
-	val error: Boolean? = null,
-
 	@field:SerializedName("message")
 	val message: String? = null
 )

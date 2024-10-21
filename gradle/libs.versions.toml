@@ -40,6 +40,7 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

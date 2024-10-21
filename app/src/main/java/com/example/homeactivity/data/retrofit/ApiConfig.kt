@@ -1,10 +1,11 @@
 package com.example.homeactivity.data.retrofit
 
+import com.example.homeactivity.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-    private const val BASE_URL = "https://event-api.dicoding.dev/"
+    private const val BASE_URL = BuildConfig.BASE_URL
     private var retrofit: Retrofit? = null
 
     val apiService: ApiService
