@@ -4,6 +4,7 @@
     <string name="upcoming">Upcoming</string>
     <string name="finished">Finished</string>
     <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
     <string name="register">Register</string>
     <string name="title_upcoming">Dicoding Event</string>
     <string name="description_upcoming">Recommendation for you</string>
