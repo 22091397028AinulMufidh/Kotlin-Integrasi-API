@@ -8,9 +8,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.homeactivity.databinding.ActivityMainBinding
-import com.example.homeactivity.ui.setting.MainViewModel
+import com.example.homeactivity.ui.setting.SettingViewModel
 import com.example.homeactivity.ui.setting.SettingPreferences
-import com.example.homeactivity.ui.setting.ViewModelFactory
+import com.example.homeactivity.ui.setting.SettingViewModelFactory
 import com.example.homeactivity.ui.setting.dataStore
 import com.example.homeactivity.ui.upcoming.EventAdapterActive
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,8 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-//    private var mainViewModel: MainViewModel by viewModels()
-    private lateinit var mainViewModel: MainViewModel
+    private lateinit var mainViewModel: SettingViewModel
     private lateinit var eventAdapter: EventAdapterActive
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 //       DARK THEME START
         // Initialize DataStore and ViewModel
         val pref = SettingPreferences.getInstance(application.dataStore)
-        mainViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, SettingViewModelFactory(pref)).get(SettingViewModel::class.java)
 
         // Observe the theme setting and apply it
         mainViewModel.getThemeSettings().observe(this) { isDarkModeActive: Boolean ->

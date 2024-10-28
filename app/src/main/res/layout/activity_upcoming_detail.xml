@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    android:background="@android:color/white"
     tools:context=".ui.upcoming.UpcomingDetailActivity">
 
     <LinearLayout
@@ -15,12 +14,28 @@
         android:gravity="center_horizontal"
         android:paddingBottom="16dp">
 
-        <!-- Gambar Event (imageLogo/mediaCover) -->
-        <ImageView
-            android:id="@+id/img_event_logo"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:scaleType="centerCrop" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_event_logo"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:scaleType="centerCrop" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="4dp"
+                app:srcCompat="@drawable/favorite_border"
+                android:contentDescription="@string/favorite"
+                app:tint="@android:color/black"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="end|bottom"/>
+        </FrameLayout>
 
         <!-- Nama Acara (name) -->
         <TextView

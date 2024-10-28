@@ -48,11 +48,11 @@
         app:cardCornerRadius="4dp">
 
         <!-- RecyclerView untuk Upcoming Events di bawah Title -->
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/recyclerHome"-->
-<!--            android:layout_width="200dp"-->
-<!--            android:layout_height="200dp"-->
-<!--            android:scrollbars="horizontal" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHome"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scrollbars="horizontal" />
     </androidx.cardview.widget.CardView>
 
     <!-- ProgressBar -->

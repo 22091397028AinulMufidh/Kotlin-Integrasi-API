@@ -34,4 +34,6 @@
         android:name="com.example.homeactivity.ui.setting.SettingFragment"
         android:label="@string/setting"
         tools:layout="@layout/fragment_setting" />
+
+
 </navigation>
